@@ -11,8 +11,8 @@ const parsedDate = new Date(input);
 if (!isNaN(parsedDate.getTime())) {
     return true;
 }
-
-return false;
+}else{
+return false;	
 }
 }
 
