@@ -6,10 +6,7 @@ function isDate(input) {
     return true;
   }
 }
-  // If the input is not a string, check if it's a Date object
-  if (input instanceof Date) {
-    return !isNaN(input.getTime());
-  }
+ 
 
   // If the input is neither a string nor a Date object, return false
   return false;
