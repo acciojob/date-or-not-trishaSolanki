@@ -5,6 +5,7 @@ function isDate(input) {
     const date = new Date(input);
     // Check if the conversion was successful
     return !isNaN(date.getTime());
+	 return true;
   }
 
   // If the input is not a string, check if it's a Date object
