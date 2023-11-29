@@ -1,21 +1,20 @@
 function isDate(input) {
-if (input instanceof Date) {
-// Check if it's already a Date object
-return !isNaN(input.getTime());
-}
+  // Check if the input is a string
+  if (typeof input === 'string') {
+    // Try to convert the string back to a Date object
+    const date = new Date(input);
+    // Check if the conversion was successful
+    return !isNaN(date.getTime());
+  }
 
-if (typeof input === 'string' || typeof input === 'number') {
-// Try to parse the input into a Date object
-	 
-const parsedDate = new Date(input);
-if (!isNaN(parsedDate.getTime())) {
-    return true;
-}
-}else{
-return false;	
-}
-}
+  // If the input is not a string, check if it's a Date object
+  if (input instanceof Date) {
+    return !isNaN(input.getTime());
+  }
 
+  // If the input is neither a string nor a Date object, return false
+  return false;
+}
 // Do not change the code below.
  const input = prompt("Enter Date.");
  alert(isDate(input));
