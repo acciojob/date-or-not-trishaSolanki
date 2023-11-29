@@ -5,11 +5,13 @@ function isDate(input) {
   if (!isNaN(parsedDate.getTime())) {
     return true;
   }
+}else{
+	return false;  
 }
  
 
   // If the input is neither a string nor a Date object, return false
-  return false;
+  
 }
 
 // Do not change the code below.
